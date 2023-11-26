@@ -71,16 +71,3 @@
       pip:
         name: docker
         state: present
-        
-    - name: Pull Docker image
-      docker_image:
-        name: jayshah488/docker_class_file
-        source: pull
-
-    - name: Run Docker container
-      docker_container:
-        name: nodeapp
-        image: jayshah488/docker_class_file
-        state: started
-        ports:
-        - "3000:3000"
